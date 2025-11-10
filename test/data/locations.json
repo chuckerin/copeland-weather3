@@ -1,0 +1,20 @@
+[
+  {
+    "city": "Belleville,us",
+    "zip": "62221,us",
+    "lat": "38.5396",
+    "lon": "-89.9583"
+  },
+  {
+    "city": "Fairbanks,us",
+    "zip": "99710,us",
+    "lat": "64.8378",
+    "lon": "-147.7164"
+  },
+  {
+    "city": "Salt%20Lake%20City,us",
+    "zip": "84104,us",
+    "lat": "40.7608",
+    "lon": "-111.8911"
+  }
+]

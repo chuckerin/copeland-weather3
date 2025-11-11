@@ -34,9 +34,6 @@ function App() {
   function handleZipCodeInputChange(event: InputMaskChangeEvent) {
     const val = event.target.value;
     if (val === null || val === undefined) return;
-
-    console.log(val);
-
     if (val.includes('_')) {
       setIsZipCodeInputValid(false);
     }
@@ -65,7 +62,6 @@ function App() {
       regexNoSpacesPattern.test(geoCodeInput.current?.value) &&
       regexGeocodePattern.test(geoCodeInput.current?.value)
     ) {
-      console.log(geoCodeInput.current?.value);
       setIsGeoCodeInputValid(true);
     } else {
       setIsGeoCodeInputValid(false);
@@ -106,9 +102,6 @@ function App() {
         },
       };
       setWeatherItem(weatherItem);
-
-      console.log('API Response:', response.data);
-      console.log('Weather Item:', weatherItem);
     });
   }
 
@@ -141,8 +134,6 @@ function App() {
         }
       })
       .finally(() => setIsLoading(false));
-
-    console.log('Axios Resp -> ', response);
 
     return response;
   }

@@ -33,7 +33,6 @@ function ZipCodeSearchMask(props: Props) {
           onChange={handleZipCodeInputChange}
           mask='99999'
           onComplete={() => {
-            // console.log(isZipCodeInputValid);
             setIsZipCodeInputValid(true);
           }}
           className={

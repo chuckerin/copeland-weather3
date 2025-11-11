@@ -68,8 +68,6 @@ export const intToRomanNumeral3 = (num: number): string => {
   let ans = '';
 
   for (const key in romanNumMap) {
-    // const val = romanNumMap[key];
-    // console.log(`key: ${key}, val: ${val}`);
     while (num >= romanNumMap[key]) {
       ans += key;
       num -= romanNumMap[key];
@@ -85,12 +83,11 @@ function replaceInvalidRomanNumerals(str: string): string {
     CCCC = 'CD', // 400
     LXXXX = 'XC', // 90
     XXXX = 'XL', // 40
-    VIIII = 'IX', // 9
+    VIIII = 'IX', // 9`
     IIII = 'IV', // 4
   }
 
   for (const [key, value] of Object.entries(ShorcutRomanNumMap)) {
-    // console.log(`Key: ${key}, Value: ${value}`);
     str = str.replace(key, value);
   }
 

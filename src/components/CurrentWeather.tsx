@@ -10,14 +10,6 @@ interface Props {
 function CurrentWeather(props: Props) {
   const { weatherItemState, requestErrorState, isLoading } = props;
 
-  // console.log('weatherItemState', weatherItemState);
-  // console.log('requestErrorState', requestErrorState);
-  // console.log('isLoading', isLoading);
-
-  // if (!weatherItemState) return null;
-
-  // const { city, temperature, geoCode } = weatherItemState;
-  // const { lat, lon } = geoCode;
   const city = props.weatherItemState?.city;
   const temperature = props.weatherItemState?.temperature;
   const geoCode = props.weatherItemState?.geoCode;

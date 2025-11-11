@@ -23,7 +23,7 @@ function GeoCodeSearch(props: Props) {
     <>
       <div className='flex flex-column gap-2 components'>
         <label htmlFor='geocode' className='label'>
-          Latitude,Longitude
+          Lat,Lon
         </label>
         <InputText
           id='geocode'

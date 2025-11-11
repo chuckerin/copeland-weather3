@@ -14,7 +14,6 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import './App.css';
 import ZipCodeSearchMask from './components/ZipCodeSearchMask';
 import type { InputMaskChangeEvent } from 'primereact/inputmask';
 import CitySearch from './components/CitySearch';

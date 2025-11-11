@@ -14,6 +14,13 @@ describe('Test URL Builder', () => {
     expect(actualUrl).toEqual(expectedUrl);
   });
 
+  test('Build City URL with spaces', () => {
+    const city = 'Salt Lake City';
+    const expectedUrl = `https://api.openweathermap.org/data/2.5/weather?appid=cf002751564a4c78f5f7ed479f1b9ba3&units=imperial&q=Salt%20Lake%20City,us`;
+    const actualUrl = buildCityUrl(city);
+    expect(actualUrl).toEqual(expectedUrl);
+  });
+
   test('Build Zip URL', () => {
     const zip = '62221';
     const expectedUrl = `https://api.openweathermap.org/data/2.5/weather?appid=cf002751564a4c78f5f7ed479f1b9ba3&units=imperial&zip=${zip},us`;

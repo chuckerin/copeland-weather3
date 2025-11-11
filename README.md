@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# Copeland Weather Exercise
+## Instructions
+### Software Recruiting – Take Home
+Copeland wants to learn more about your work-related skills and abilities. We encourage you to
+frame this assignment not as a pass/fail but rather a show-and-tell of your hard skills. We've
+chosen a task that should take a couple hours and hopefully be a little fun. Feel free to write it in
+any style you like. We are looking specifically for code that is human-friendly. While not
+required, if you take steps that you normally would when writing production code we'll take that
+into consideration too - for example creation of a makefile or equivalent, tests, tooling,
+automation, documentation, committing under source control, etc.
+The assignment will be completed remotely at your convenience, and we expect the assignment
+to take 3-8 hours to complete.
+Please complete and return this assessment within 3 days of receipt or let us know if you need
+more time to complete. We must have the assignment completed and returned at least 1 full
+business day prior to your interview. Don't hesitate to reach out if you have questions!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Take Home Assignment:
+Build an application using whatever tools, components, or third-party libraries that you'd like.
+The app should allow a user to search for current weather conditions by city name, zip code, or
+coordinates (GPS, reverse geolocation) using the https://openweathermap.org/api API. The
+application should be organized in a way where new features can be easily added and/or tested
+and that you would be happy to maintain.
+Once the application is ready, script or otherwise automate a virtual network using tools of your
+choice to deploy and run your application in a private network that can only be accessed via
+VPN. Include a VPN setup file for use in connecting to the VPN. Also include instructions for
+accessing the application that works when connected to the VPN but will fail (likely with
+NXDOMAIN or similar error) when not connected to the VPN.
+Be sure to submit documentation on how to run the application, including some examples of
+how to connect and use it.
+You can generate your own API key for openweathermap for free but it can take several days to
+become active.
 
-Currently, two official plugins are available:
+Here is an API Token you can use in the meantime: cf002751564a4c78f5f7ed479f1b9ba3
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Deployed site
+[Copeland Weather](https://chuckerin.github.io/copeland-weather3/)
 
-## React Compiler
+## Project tools
+* [Typscript](https://www.typescriptlang.org/) - Primary language
+* [React](https://react.dev/) - UI Library
+* [PrimeReact](https://primereact.org/) - UI Components
+* [Vite](https://vite.dev/) - Build tool
+* [Vitest](https://vitest.dev/) - Testing framework
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## VSCode Extensions
+* [Vitest](https://marketplace.visualstudio.com/items?itemName=vitest.explorer) -
+* [Azure Static Web Apps](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
 
-## Expanding the ESLint configuration
+## Node packages
+* [gh-pages](https://www.npmjs.com/package/gh-pages) - Used for deploying to GitHub Pages  
+This should be installed when doing a the initial `npm install`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```

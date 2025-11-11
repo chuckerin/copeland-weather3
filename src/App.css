@@ -52,14 +52,14 @@
   color: maroon;
   padding: 2em;
   min-height: 25px;
-  border: 2px solid maroon;
+  /* border: 2px solid maroon; */
 }
 
 .components {
   justify-items: right;
   padding: 2em;
   /* width: 800px; */
-  border: 2px solid rgb(0, 255, 179);
+  /* border: 2px solid rgb(0, 255, 179); */
 }
 
 .btn {
@@ -84,12 +84,12 @@
   font-size: 1.2em;
   /* padding: 1.5em; */
   min-height: 100px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .response-container {
   min-height: 250px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .response-label {
@@ -103,7 +103,7 @@
 
 .validation-message {
   min-height: 50px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .footer-text {

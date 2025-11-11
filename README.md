@@ -44,10 +44,30 @@ Here is an API Token you can use in the meantime: cf002751564a4c78f5f7ed479f1b9b
 
 ## VSCode Extensions
 * [Vitest](https://marketplace.visualstudio.com/items?itemName=vitest.explorer) -
-* [Azure Static Web Apps](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
+* <a href="http://example.com/" target="_blank">Azure Static Web Apps</a>
+
+[](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
 
 ## Node packages
 * [gh-pages](https://www.npmjs.com/package/gh-pages) - Used for deploying to GitHub Pages  
 This should be installed when doing a the initial `npm install`
+
+## Cloning, Testing, Running, & Deploying
+1. Open a terminal, navigate to the location you want to clone the project.
+2. Clone the project `git clone https://github.com/chuckerin/copeland-weather3.git`
+3. Navigate to the root of the project `cd copeland-weather3`
+4. Add the project to your GitHub account
+    1. `git init`
+    2. `git add .`
+    3. `git commit -m "Initial commit of project"`
+    4. `git remote add origin <remote_repository_URL>`
+    5. `git push -u origin main`
+5. Install the package dependencies `npm i`
+6. Test the app with `npm run test` or using the Vitest extension.
+7. Run the app `npm run dev`
+    1. The project should be served on `http://localhost:5173/copeland-weather3` which you can open with the browser of your choosing.
+8. Deploy the project to GitHub pages with `npm run deploy`
+    1. You may be asked to provide the <remote_repository_URL> and your github credentials
+    2. You can watch the progress of the deployment on the `Actions` tab of the repository
 
 

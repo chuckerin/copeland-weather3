@@ -19,6 +19,9 @@ function GeoCodeSearch(props: Props) {
     handleSubmit,
   } = props;
 
+  const geoCode =
+    geoCodeInput.current !== null ? geoCodeInput.current.value : '';
+
   return (
     <>
       <div className='flex flex-column gap-2 components'>
@@ -42,11 +45,11 @@ function GeoCodeSearch(props: Props) {
         </Button>
       </div>
       <div className='validation-message'>
-        {/* {!isGeoCodeInputValid && (
+        {!isGeoCodeInputValid && (geoCode.length ?? 0) > 0 && (
           <small id='geCodeHelp' className='p-error'>
-            Invalid GeoCode
+            Invalid characters in GeoCode
           </small>
-        )} */}
+        )}
       </div>
     </>
   );

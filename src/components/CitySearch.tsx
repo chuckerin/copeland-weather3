@@ -19,6 +19,8 @@ function CitySearch(props: Props) {
     handleSubmit,
   } = props;
 
+  const cityName = cityInput.current !== null ? cityInput.current.value : '';
+
   return (
     <>
       <div className='flex flex-column gap-2 components'>
@@ -42,11 +44,11 @@ function CitySearch(props: Props) {
         </Button>
       </div>
       <div className='validation-message'>
-        {/* {!isCityInputValid && (
+        {!isCityInputValid && (cityName.length ?? 0) > 0 && (
           <small id='cityHelp' className='p-error'>
-            Invalid City
+            Invalid characters in City Name
           </small>
-        )} */}
+        )}
       </div>
     </>
   );

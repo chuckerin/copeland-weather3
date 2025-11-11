@@ -19,6 +19,11 @@ import type { InputMaskChangeEvent } from 'primereact/inputmask';
 import CitySearch from './components/CitySearch';
 import GeoCodeSearch from './components/GeoCodeSearch';
 import CurrentWeather from './components/CurrentWeather';
+import {
+  regexCityPattern,
+  regexGeocodePattern,
+  regexNoSpacesPattern,
+} from './utils/regex-patterns';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,9 +32,12 @@ function App() {
   const [zipCodeInput, setZipCodeInput] = useState('');
   const [isZipCodeInputValid, setIsZipCodeInputValid] = useState(false);
   function handleZipCodeInputChange(event: InputMaskChangeEvent) {
-    const val = event.target?.value;
+    const val = event.target.value;
+    if (val === null || val === undefined) return;
 
-    if ((val === null || val === undefined) ?? val.includes('_')) {
+    console.log(val);
+
+    if (val.includes('_')) {
       setIsZipCodeInputValid(false);
     }
     setZipCodeInput(val!);
@@ -39,12 +47,29 @@ function App() {
   const cityInput = useRef<HTMLInputElement>(null!);
   const [isCityInputValid, setIsCityInputValid] = useState(false);
   function handleIsCityInputValid() {
-    setIsCityInputValid(cityInput.current?.value.length > 0);
+    if (
+      cityInput.current?.value.length > 0 &&
+      regexCityPattern.test(cityInput.current?.value)
+    ) {
+      setIsCityInputValid(true);
+      // }
+    } else {
+      setIsCityInputValid(false);
+    }
   }
   const geoCodeInput = useRef<HTMLInputElement>(null!);
   const [isGeoCodeInputValid, setIsGeoCodeInputValid] = useState(false);
   function handleIsGeoCodeInputValid() {
-    setIsGeoCodeInputValid(geoCodeInput.current?.value.length > 0);
+    if (
+      geoCodeInput.current?.value.length > 0 &&
+      regexNoSpacesPattern.test(geoCodeInput.current?.value) &&
+      regexGeocodePattern.test(geoCodeInput.current?.value)
+    ) {
+      console.log(geoCodeInput.current?.value);
+      setIsGeoCodeInputValid(true);
+    } else {
+      setIsGeoCodeInputValid(false);
+    }
   }
 
   // State for if request errors out

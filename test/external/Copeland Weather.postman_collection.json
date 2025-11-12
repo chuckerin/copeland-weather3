@@ -1,0 +1,687 @@
+{
+	"info": {
+		"_postman_id": "76e3c42e-5006-4788-ac13-7df0fbadc361",
+		"name": "Copeland Weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47850838",
+		"_collection_link": "https://chuckerin-black-s-team.postman.co/workspace/Team-Workspace~3d5cfb61-663a-431d-8c00-f30afa8e4bee/collection/47850838-76e3c42e-5006-4788-ac13-7df0fbadc361?action=share&source=collection_link&creator=47850838"
+	},
+	"item": [
+		{
+			"name": "Fairbanks, AK",
+			"item": [
+				{
+					"name": "Get Current Weather by City Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&q={{city}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "q",
+									"value": "{{city}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Zip Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&zip={{zip}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "zip",
+									"value": "{{zip}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Geo Codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&lat={{lat}}&lon={{lon}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lon",
+									"value": "{{lon}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.environment.set(\"city\", \"Fairbanks,us\");\r",
+							"pm.environment.set(\"zip\", \"99710,us\");\r",
+							"pm.environment.set(\"lat\", \"64.8378\");\r",
+							"pm.environment.set(\"lon\", \"-147.7164\")\r",
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Belleville, IL",
+			"item": [
+				{
+					"name": "Get Current Weather by City Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&q={{city}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "q",
+									"value": "{{city}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Zip Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&zip={{zip}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "zip",
+									"value": "{{zip}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Geo Codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&lat={{lat}}&lon={{lon}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lon",
+									"value": "{{lon}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.environment.set(\"city\", \"Belleville,us\");\r",
+							"pm.environment.set(\"zip\", \"62221,us\");\r",
+							"pm.environment.set(\"lat\", \"38.5396\");\r",
+							"pm.environment.set(\"lon\", \"-89.9583\")"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Salt Lake City, UT",
+			"item": [
+				{
+					"name": "Get Current Weather by City Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&q={{city}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "q",
+									"value": "{{city}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Zip Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&zip={{zip}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "zip",
+									"value": "{{zip}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Geo Codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&lat={{lat}}&lon={{lon}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lon",
+									"value": "{{lon}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"pm.environment.set(\"city\", \"Salt%20Lake%20City,us\");\r",
+							"pm.environment.set(\"zip\", \"84104,us\");\r",
+							"pm.environment.set(\"lat\", \"40.7608\");\r",
+							"pm.environment.set(\"lon\", \"-111.8911\")"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Milton-Freewater, OR",
+			"item": [
+				{
+					"name": "Get Current Weather by City Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&q={{city}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "q",
+									"value": "{{city}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Zip Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&zip={{zip}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "zip",
+									"value": "{{zip}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Geo Codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&lat={{lat}}&lon={{lon}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lon",
+									"value": "{{lon}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"pm.environment.set(\"city\", \"Milton-Freewater,us\");\r",
+							"pm.environment.set(\"zip\", \"97862,us\");\r",
+							"pm.environment.set(\"lat\", \"45.9326\");\r",
+							"pm.environment.set(\"lon\", \"-118.3877\")"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "St. Louis, MO",
+			"item": [
+				{
+					"name": "Get Current Weather by City Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&q={{city}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "q",
+									"value": "{{city}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Zip Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&zip={{zip}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "zip",
+									"value": "{{zip}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Geo Codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&lat={{lat}}&lon={{lon}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lon",
+									"value": "{{lon}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"pm.environment.set(\"city\", \"St.%20Louis,us\");\r",
+							"pm.environment.set(\"zip\", \"63101,us\");\r",
+							"pm.environment.set(\"lat\", \"38.6273\");\r",
+							"pm.environment.set(\"lon\", \"-90.1979\")"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "No Environmental Data, Use JSON File",
+			"item": [
+				{
+					"name": "Get Current Weather by City Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&q={{city}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "q",
+									"value": "{{city}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Zip Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&zip={{zip}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "zip",
+									"value": "{{zip}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather by Geo Codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}?appid={{appid}}&lat={{lat}}&lon={{lon}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{appid}}"
+								},
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lon",
+									"value": "{{lon}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {\r",
+					"    pm.response.to.have.status(200);\r",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "https://api.openweathermap.org/data/2.5/weather"
+		},
+		{
+			"key": "appid",
+			"value": "cf002751564a4c78f5f7ed479f1b9ba3"
+		}
+	]
+}

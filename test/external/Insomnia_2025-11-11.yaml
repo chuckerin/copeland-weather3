@@ -1,0 +1,790 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_9f95427aa3bb49659557a6e076f51d8a
+  created: 1762360909018
+  modified: 1762360909018
+  description: ""
+collection:
+  - name: Weather
+    meta:
+      id: fld_127376f63ab24dbf84a86adbfbb12670
+      created: 1762361135869
+      modified: 1762874066198
+      sortKey: -1762361135869
+      description: ""
+    children:
+      - url: "{{BASE_URL}}"
+        name: Invalid Zip Code
+        meta:
+          id: req_670ae9640420455aaa6c9a305d689bfd
+          created: 1762360983948
+          modified: 1762363257634
+          isPrivate: false
+          description: ""
+          sortKey: -1762361146564
+        method: GET
+        parameters:
+          - id: pair_403a0276f1644a30afbe82266eccf890
+            name: zip
+            value: ABCD,us
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        scripts:
+          afterResponse: |+
+            
+            insomnia.test('Check if status is 200', () => {
+                insomnia.expect(insomnia.response.code).to.eql(200);
+            });
+
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - name: Fairbanks, AK
+        meta:
+          id: fld_5d4aa7e62ce644259a771709da279478
+          created: 1762360937681
+          modified: 1762379303289
+          sortKey: -1762361146464
+          description: ""
+        children:
+          - url: "{{ _.BASE_URL }}"
+            name: Get Current Weather by Geocode
+            meta:
+              id: req_2e904ef841cb4c9596e0fc910114e44b
+              created: 1762362348050
+              modified: 1762375678517
+              isPrivate: false
+              description: ""
+              sortKey: -1762362372765
+            method: GET
+            parameters:
+              - id: pair_3d55b6fd7d6642e2b293fa96292c9165
+                name: lat
+                value: "{{ location.geocode.lat }}"
+                description: ""
+                disabled: false
+              - id: pair_1084c04de3904bd5abb560a791355523
+                name: lon
+                value: "{{location.geocode.lon}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by City Name
+            meta:
+              id: req_927eae546f354ed8a6cd3da8d9e628cf
+              created: 1762362367214
+              modified: 1762375648172
+              isPrivate: false
+              description: ""
+              sortKey: -1762362372815
+            method: GET
+            parameters:
+              - id: pair_2bdc0871e05b4d3d9ca65151f35d4218
+                name: q
+                value: "{{location.city}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Zip Code
+            meta:
+              id: req_33d6351e7d8d411f830ba90a9f05115d
+              created: 1762362403337
+              modified: 1762375622833
+              isPrivate: false
+              description: ""
+              sortKey: -1762362372865
+            method: GET
+            parameters:
+              - id: pair_c38ffa40c86a4afea1ba8fe7659d8aaf
+                name: zip
+                value: "{{location.zip}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+        environment:
+          location:
+            city: Fairbanks,us
+            zip: 99710,us
+            geocode:
+              lat: "64.8378"
+              lon: "-147.7164"
+      - name: Belleville, IL
+        meta:
+          id: fld_9de2e78c389f44f794cd3bc4abb87da9
+          created: 1762360957423
+          modified: 1762378863461
+          sortKey: -1762361146364
+          description: ""
+        children:
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Zip Code
+            meta:
+              id: req_99af0ca32d23475f86adfffb2a4fd4bb
+              created: 1762361028654
+              modified: 1762375808483
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766265
+            method: GET
+            parameters:
+              - id: pair_0e97929d7dd345839af949ad214740ae
+                name: zip
+                value: "{{location.zip}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by City Name
+            meta:
+              id: req_f1b753d01ffe41b68bb3bad774fcd323
+              created: 1762361676375
+              modified: 1762375849696
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766215
+            method: GET
+            parameters:
+              - id: pair_47457c9d64844510a557f336b6e3237b
+                name: q
+                value: "{{location.city}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Geocode
+            meta:
+              id: req_6048356fa4ad4c9a9c6ca279f7ac69bc
+              created: 1762361766165
+              modified: 1762375913497
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766165
+            method: GET
+            parameters:
+              - id: pair_f8339bbbf5e246f1bf9eaf96508186a3
+                name: lat
+                value: "{{location.geocode.lat}}"
+                description: ""
+                disabled: false
+              - id: pair_0075694e639f430780cf7cf0ce79ffb2
+                name: lon
+                value: "{{location.geocode.lon}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+        environment:
+          location:
+            city: Belleville,us
+            zip: 62221,us
+            geocode:
+              lat: "38.5396"
+              lon: "-89.9583"
+      - name: Salt Lake City, UT
+        meta:
+          id: fld_e8bd3c52d1d44e0995ac9512341a5cc1
+          created: 1762375950014
+          modified: 1762379339711
+          sortKey: -1762361141116.5
+          description: ""
+        children:
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Zip Code
+            meta:
+              id: req_34d38866b53449d1b6636ab3f48793c0
+              created: 1762375950017
+              modified: 1762375950017
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766265
+            method: GET
+            parameters:
+              - id: pair_0e97929d7dd345839af949ad214740ae
+                name: zip
+                value: "{{location.zip}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by City Name
+            meta:
+              id: req_02006e819d0947cf99822af792c5c19b
+              created: 1762375950020
+              modified: 1762376414749
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766215
+            method: GET
+            parameters:
+              - id: pair_47457c9d64844510a557f336b6e3237b
+                name: q
+                value: "{{location.city}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Geocode
+            meta:
+              id: req_d24122b3a9c244548dee460a9466cdeb
+              created: 1762375950022
+              modified: 1762375950022
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766165
+            method: GET
+            parameters:
+              - id: pair_f8339bbbf5e246f1bf9eaf96508186a3
+                name: lat
+                value: "{{location.geocode.lat}}"
+                description: ""
+                disabled: false
+              - id: pair_0075694e639f430780cf7cf0ce79ffb2
+                name: lon
+                value: "{{location.geocode.lon}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+        environment:
+          location:
+            city: Salt%20Lake%20City,us
+            zip: 84104,us
+            geocode:
+              lat: "40.7608"
+              lon: "-111.8911"
+      - name: Run against JSON file
+        meta:
+          id: fld_ae65f9ecea294f94a86e4b563672e4b2
+          created: 1762383153669
+          modified: 1762383407427
+          sortKey: -1762361138492.75
+          description: ""
+        children:
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Zip Code
+            meta:
+              id: req_3cc63bb070df4ac991f7a9031778a29f
+              created: 1762383153673
+              modified: 1762383352793
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766265
+            method: GET
+            parameters:
+              - id: pair_0e97929d7dd345839af949ad214740ae
+                name: zip
+                value: "{{zip}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by City Name
+            meta:
+              id: req_3a928c3f330a4eb9931d553927270ad7
+              created: 1762383153674
+              modified: 1762383366737
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766215
+            method: GET
+            parameters:
+              - id: pair_47457c9d64844510a557f336b6e3237b
+                name: q
+                value: "{{city}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Geocode
+            meta:
+              id: req_476bb1ce20084a36a2b80b7bababd401
+              created: 1762383153676
+              modified: 1762383388698
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766165
+            method: GET
+            parameters:
+              - id: pair_f8339bbbf5e246f1bf9eaf96508186a3
+                name: lat
+                value: "{{geocode.lat}}"
+                description: ""
+                disabled: false
+              - id: pair_0075694e639f430780cf7cf0ce79ffb2
+                name: lon
+                value: "{{geocode.lon}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Milton-Freewater, UT
+        meta:
+          id: fld_893bd3237e7949239684aae4dd9892e5
+          created: 1762873347116
+          modified: 1762874066198
+          sortKey: -1762361139804.625
+          description: ""
+        children:
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Zip Code
+            meta:
+              id: req_235d9779da4341fd8e0ed4e96161eda8
+              created: 1762873347120
+              modified: 1762873488640
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766265
+            method: GET
+            parameters:
+              - id: pair_0e97929d7dd345839af949ad214740ae
+                name: zip
+                value: "{{location.zip}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by City Name
+            meta:
+              id: req_a7f4bb5afcf642f1add819c447d60ae3
+              created: 1762873347123
+              modified: 1762873347123
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766215
+            method: GET
+            parameters:
+              - id: pair_47457c9d64844510a557f336b6e3237b
+                name: q
+                value: "{{location.city}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Geocode
+            meta:
+              id: req_493667e651bd4cc99ddbd18e31fddbbc
+              created: 1762873347125
+              modified: 1762873554371
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766165
+            method: GET
+            parameters:
+              - id: pair_f8339bbbf5e246f1bf9eaf96508186a3
+                name: lat
+                value: "{{location.geocode.lat}}"
+                description: ""
+                disabled: false
+              - id: pair_0075694e639f430780cf7cf0ce79ffb2
+                name: lon
+                value: "{{location.geocode.lon}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+        environment:
+          location:
+            city: Milton-Freewater,us
+            zip: 97862,us
+            geocode:
+              lat: "45.9326"
+              lon: "-118.3877"
+      - name: St. Louis, MO
+        meta:
+          id: fld_f3a1f9aef6534270ba0384701d13205e
+          created: 1762873649499
+          modified: 1762873717726
+          sortKey: -1762361139148.6875
+          description: ""
+        children:
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Zip Code
+            meta:
+              id: req_ed7c4019ddd545eab6b573cd332d1118
+              created: 1762873649501
+              modified: 1762873649501
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766265
+            method: GET
+            parameters:
+              - id: pair_0e97929d7dd345839af949ad214740ae
+                name: zip
+                value: "{{location.zip}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by City Name
+            meta:
+              id: req_93dc174d576644f6a76df0b66b5952bf
+              created: 1762873649503
+              modified: 1762873649503
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766215
+            method: GET
+            parameters:
+              - id: pair_47457c9d64844510a557f336b6e3237b
+                name: q
+                value: "{{location.city}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{BASE_URL}}"
+            name: Get Current Weather by Geocode
+            meta:
+              id: req_42e0ab935ae640ce8e1bdee68d30c424
+              created: 1762873649507
+              modified: 1762873649507
+              isPrivate: false
+              description: ""
+              sortKey: -1762361766165
+            method: GET
+            parameters:
+              - id: pair_f8339bbbf5e246f1bf9eaf96508186a3
+                name: lat
+                value: "{{location.geocode.lat}}"
+                description: ""
+                disabled: false
+              - id: pair_0075694e639f430780cf7cf0ce79ffb2
+                name: lon
+                value: "{{location.geocode.lon}}"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            scripts:
+              afterResponse: |+
+                
+                insomnia.test('Check if status is 200', () => {
+                    insomnia.expect(insomnia.response.code).to.eql(200);
+                });
+
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+        environment:
+          location:
+            city: St.%20Louis,us
+            zip: 63101,us
+            geocode:
+              lat: "38.6273"
+              lon: "-90.1979"
+    environment:
+      BASE_URL: https://api.openweathermap.org/data/2.5/weather?appid=cf002751564a4c78f5f7ed479f1b9ba3
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_b2cacba632e841b77a7298bd096539f980e9c7d9
+    created: 1762360909035
+    modified: 1762874066194
+environments:
+  name: Base Environment
+  meta:
+    id: env_b2cacba632e841b77a7298bd096539f980e9c7d9
+    created: 1762360909022
+    modified: 1762874066196
+    isPrivate: false

@@ -73,4 +73,7 @@ This should be installed when doing a the initial `npm install`
 8. Deploy the project to GitHub pages with `npm run deploy`
     1. You can watch the progress of the deployment on the `Actions` tab of the repository after it's been built and published
 
+## External Tools
+In the project directory `/test/external` are exported collections for both [Insomnia](https://insomnia.rest/) and [Postman](https://www.postman.com/) to test out the external weather map RESTful services.
 
+In the project directory `/text/data` are data files that can be used for [Insomnia](https://insomnia.rest/) and [Postman](https://www.postman.com/) automated runs.

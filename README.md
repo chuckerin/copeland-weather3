@@ -62,12 +62,12 @@ This should be installed when doing a the initial `npm install`
     1. The project should be served on `http://localhost:5173/copeland-weather3` which you can open with the browser of your choosing.
 7. Add the project to your GitHub account
     1. Create a new repository at github.com. (this is your repository)
-        1. Give it the same name as the other repository.
-        2. Don't initialize it with a README, .gitignore, or license.
+        * Give it the same name as the other repository.
+        * Don't initialize it with a README, .gitignore, or license.
     2. Rename the local repository's current 'origin' to 'upstream'.
-        1. `git remote rename origin upstream`
+        * `git remote rename origin upstream`
     3. Give the local repository an 'origin' that points to your repository.
-        * `git remote add origin https://github.com/<your-account/your-repository.git>`
+        * `git remote add origin https://github.com/<your-account>/<your-repository>.git>`
     4. Push the local repository to your repository on github.
         * `git push origin main`
 8. Deploy the project to GitHub pages with `npm run deploy`

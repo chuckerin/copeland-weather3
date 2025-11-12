@@ -43,8 +43,8 @@ Here is an API Token you can use in the meantime: cf002751564a4c78f5f7ed479f1b9b
 * [Vitest](https://vitest.dev/) - Testing framework
 
 ## VSCode Extensions
-* [Vitest](https://marketplace.visualstudio.com/items?itemName=vitest.explorer) -
-* <a href="http://example.com/" target="_blank">Azure Static Web Apps</a>
+* [Vitest](https://marketplace.visualstudio.com/items?itemName=vitest.explorer) - Great test extension that allows testing, coverage, and debugging
+* <a href="http://example.com/" target="_blank">Azure Static Web Apps</a> - I can't get this site to run correctly on Azure
 
 [](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
 

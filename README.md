@@ -56,18 +56,21 @@ This should be installed when doing a the initial `npm install`
 1. Open a terminal, navigate to the location you want to clone the project.
 2. Clone the project `git clone https://github.com/chuckerin/copeland-weather3.git`
 3. Navigate to the root of the project `cd copeland-weather3`
-4. Add the project to your GitHub account
-    1. `git init`
-    2. `git add .`
-    3. `git commit -m "Initial commit of project"`
-    4. `git remote add origin <remote_repository_URL>`
-    5. `git push -u origin main`
-5. Install the package dependencies `npm i`
-6. Test the app with `npm run test` or using the Vitest extension.
-7. Run the app `npm run dev`
+4. Install the package dependencies `npm i`
+5. Test the app with `npm run test` or using the Vitest extension.
+6. Run the app `npm run dev`
     1. The project should be served on `http://localhost:5173/copeland-weather3` which you can open with the browser of your choosing.
+7. Add the project to your GitHub account
+    1. Create a new repository at github.com. (this is your repository)
+        1. Give it the same name as the other repository.
+        2. Don't initialize it with a README, .gitignore, or license.
+    2. Rename the local repository's current 'origin' to 'upstream'.
+        1. `git remote rename origin upstream`
+    3. Give the local repository an 'origin' that points to your repository.
+        * `git remote add origin https://github.com/<your-account/your-repository.git>`
+    4. Push the local repository to your repository on github.
+        * `git push origin main`
 8. Deploy the project to GitHub pages with `npm run deploy`
-    1. You may be asked to provide the <remote_repository_URL> and your github credentials
-    2. You can watch the progress of the deployment on the `Actions` tab of the repository
+    1. You can watch the progress of the deployment on the `Actions` tab of the repository after it's been built and published
 
 

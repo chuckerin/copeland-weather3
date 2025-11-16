@@ -69,6 +69,10 @@
   text-align: center;
 }
 
+.btn-fill {
+  color: #ff0000; /* Sets the icon color to red */
+}
+
 .label {
   font-size: 2em;
   font-family: 'Orbitron', sans-serif;

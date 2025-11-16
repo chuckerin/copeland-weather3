@@ -177,8 +177,9 @@ function App() {
       </div>
       <div className='response-container'>
         <CurrentWeather
-          weatherItemState={weatherItem}
-          requestErrorState={requestError}
+          weatherItem={weatherItem}
+          setWeatherItem={setWeatherItem}
+          requestError={requestError}
           isLoading={isLoading}
         />
       </div>

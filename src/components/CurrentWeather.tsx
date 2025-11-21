@@ -1,9 +1,9 @@
 import { Card } from 'primereact/card';
 import type { WeatherItem } from '../utils/types';
 import { Button } from 'primereact/button';
-// import FavWeather from './FavWeather';
 import { useEffect, useState, type Dispatch, type SetStateAction } from 'react';
-import fetchFavWeather from '../actions/fetchFavWeather';
+import fetchFavWeather from '../actions/fetch-fav-weather';
+// import setLocalStorage from '../utils/local-storage';
 
 interface Props {
   weatherItem: WeatherItem | null;
@@ -22,15 +22,33 @@ function CurrentWeather(props: Props) {
   const lat = geoCode?.lat;
   const lon = geoCode?.lon;
 
-  function handleLikeClick(event: React.MouseEvent<HTMLButtonElement>) {
-    console.log('has clicked', event);
+  async function handleLikeClick() {
+    console.log(
+      'hasFav b4',
+      hasFav,
+      'favLocation b4',
+      localStorage.getItem('favLocation'),
+      'city b4',
+      city
+    );
 
     if (hasFav && localStorage.getItem('favLocation') === city) {
       localStorage.removeItem('favLocation');
+      setHasFav(false);
     } else {
       localStorage.setItem('favLocation', city ?? '');
+      // await setLocalStorage(city ?? '');
+      setHasFav(true);
     }
-    setHasFav(!hasFav);
+
+    console.log(
+      'hasFav aft',
+      hasFav,
+      'favLocation aftr',
+      localStorage.getItem('favLocation'),
+      'city after',
+      city
+    );
   }
 
   useEffect(() => {

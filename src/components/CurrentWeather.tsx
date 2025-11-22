@@ -24,48 +24,20 @@ function CurrentWeather(props: Props) {
 
   async function handleLikeClick() {
     if (hasFav && localStorage.getItem('favLocation') === city) {
-      // localStorage.removeItem('favLocation');
       localStorage.setItem('favLocation', '');
       setHasFav(false);
-      console.log(
-        'hasFav b4',
-        hasFav,
-        'favLocation b4',
-        localStorage.getItem('favLocation'),
-        'city b4',
-        city
-      );
     } else {
-      // localStorage.setItem('favLocation', city ?? '');
       setHasFav(false);
-      // console.log(
-      //   'hasFav b4',
-      //   hasFav,
-      //   'favLocation b4',
-      //   localStorage.getItem('favLocation'),
-      //   'city b4',
-      //   city
-      // );
       await setLocalStorage(city ?? '').then(() => {
         setHasFav(true);
-        // console.log(
-        //   'hasFav aft',
-        //   hasFav,
-        //   'favLocation aftr',
-        //   localStorage.getItem('favLocation'),
-        //   'city after',
-        //   city
-        // );
       });
     }
   }
 
   useEffect(() => {
-    // This code runs only once after the component mounts
-    // console.log('MyComponent has mounted!');
     const favCity = localStorage.getItem('favLocation');
     if (favCity === null) return;
-    // console.log('favCity', favCity);
+
     if (favCity !== '') {
       setHasFav(true);
       fetchFavWeather(favCity).then((response) => {
@@ -82,7 +54,6 @@ function CurrentWeather(props: Props) {
         setWeatherItem(weatherItem);
       });
     }
-    // You can perform data fetching, set up subscriptions, etc. here
   }, []); // Empty dependency array ensures it runs only on mount
 
   // setState will not update for new fav cities without this useEffect
@@ -130,7 +101,6 @@ function CurrentWeather(props: Props) {
           </div>
         </Card>
       )}
-      {/* <FavWeather /> */}
     </>
   );
 }

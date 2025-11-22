@@ -124,7 +124,7 @@ function App() {
       url = buildGeoCodesUrl(geoCodeInput);
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
+    // await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
 
     const response = await axios
       .get(url)

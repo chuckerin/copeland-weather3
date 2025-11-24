@@ -35,6 +35,7 @@ function CurrentWeather(props: Props) {
   }
 
   useEffect(() => {
+    console.log('mounting');
     const favCity = localStorage.getItem('favLocation');
     if (favCity === null) return;
 
@@ -54,11 +55,13 @@ function CurrentWeather(props: Props) {
         setWeatherItem(weatherItem);
       });
     }
-  }, []); // Empty dependency array ensures it runs only on mount
+  }, [setWeatherItem]); // Empty dependency array ensures it runs only on mount
 
   // setState will not update for new fav cities without this useEffect
   // it's hacky but works
-  useEffect(() => {}, [hasFav]);
+  useEffect(() => {
+    console.log('hasFav', hasFav);
+  }, [hasFav]);
 
   return (
     <>

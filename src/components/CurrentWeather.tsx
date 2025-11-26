@@ -79,8 +79,8 @@ function CurrentWeather(props: Props) {
                 id='fav'
                 icon={
                   hasFav && localStorage.getItem('favLocation') === city
-                    ? 'pi pi-apple-fill pi-spin btn-fill'
-                    : 'pi pi-apple pi-spin btn-fill'
+                    ? 'pi pi-star-fill pi-spin btn-fill'
+                    : 'pi pi-star pi-spin btn-fill'
                 }
                 rounded
                 text

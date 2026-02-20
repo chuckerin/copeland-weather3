@@ -2,8 +2,8 @@ function Footer() {
   return (
     <footer className='footer footer-text'>
       <p>
-        Created by Chuckerin Black <br></br>© 2024 Copeland Weather App. All
-        rights reserved.
+        Created by Chuckerin Black <br></br>© 2026 Current Weather All rights
+        reserved.
       </p>
     </footer>
   );

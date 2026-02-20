@@ -77,7 +77,7 @@ function App() {
   function handleSubmit(
     event:
       | React.FormEvent<HTMLFormElement>
-      | React.MouseEvent<HTMLButtonElement>
+      | React.MouseEvent<HTMLButtonElement>,
   ) {
     event.preventDefault();
 
@@ -111,7 +111,7 @@ function App() {
       | React.MouseEvent<HTMLButtonElement>,
     cityInput: string,
     zipCodeInput: string,
-    geoCodeInput: string
+    geoCodeInput: string,
   ) {
     setIsLoading(true);
     const buttonId = (event.target as HTMLButtonElement).id;
@@ -124,7 +124,7 @@ function App() {
       url = buildGeoCodesUrl(geoCodeInput);
     }
 
-    // await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
 
     const response = await axios
       .get(url)

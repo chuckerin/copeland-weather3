@@ -4,7 +4,7 @@ import { buildCityUrl } from '../utils/url-builder';
 async function fetchFavWeather(cityInput: string) {
   const url = buildCityUrl(cityInput);
 
-  // await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
+  await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
 
   const response = await axios.get(url).catch((error) => {
     if (error.response) {

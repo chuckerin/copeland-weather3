@@ -12,8 +12,6 @@ async function fetchFavWeather(cityInput: string) {
     }
   });
 
-  // console.log('Fav Axios Resp -> ', response);
-
   return response;
 }
 

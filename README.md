@@ -53,6 +53,19 @@ Here is an API Token you can use in the meantime: cf002751564a4c78f5f7ed479f1b9b
 8. Deploy the project to GitHub pages with `npm run deploy`
    1. You can watch the progress of the deployment on the `Actions` tab of the repository after it's been built and published
 
+## Connecting to the open weather map services
+
+1. Sign up for the free service at https://openweathermap.org/ to generate an API Key
+2. For local deployments you can create a `.env` file at the root of the project and paste in the following line `VITE_WEATHER_API_KEY='<YOUR_API_KEY_GOES_HERE>'`
+   1. Notice that this is poor practice to put api keys in the repository for others to view and perhaps even use.
+   2. The project defaults to not commit the .env to the repository via the .gitignore file.
+3. GitHub pages allows for you to set the environment variables in the repsitory
+   1. Click the `Settings` tab
+   2. Click the `Environments` left side menu
+   3. Click the `github-pages` link
+   4. Scroll to the bottom of the page and in the `Environment variables` section click `Add environment varaible`
+   5. In the `Add variable` dialog, copy and paste the variable name `VITE_WEATHER_API_KEY` in the `Name` text field. Copy paste your API key into the `Value` text field.
+
 ## External Tools
 
 In the project directory `/test/external` are exported collections for both [Insomnia](https://insomnia.rest/) and [Postman](https://www.postman.com/) to test out the external weather map RESTful services.

@@ -10,7 +10,7 @@ coordinates (GPS, reverse geolocation) using the https://openweathermap.org/api 
 application should be organized in a way where new features can be easily added and/or tested
 and that you would be happy to maintain.
 
-## Deployed site
+## Deployed GitHub Pages
 
 [Current Weather](https://chuckerin.github.io/copeland-weather3/)
 

@@ -1,5 +1,7 @@
 # Current Weather
 
+This was a fun take home assignment from a potential employer. I went overboard in the execution, but enjoyed it so much that I'm making it one of my key projects that will go on my Portfolio page.
+
 ### Take Home Assignment:
 
 Build an application using whatever tools, components, or third-party libraries that you'd like.
@@ -7,8 +9,6 @@ The app should allow a user to search for current weather conditions by city nam
 coordinates (GPS, reverse geolocation) using the https://openweathermap.org/api API. The
 application should be organized in a way where new features can be easily added and/or tested
 and that you would be happy to maintain.
-
-Here is an API Token you can use in the meantime: cf002751564a4c78f5f7ed479f1b9ba3
 
 ## Deployed site
 
@@ -40,6 +40,7 @@ Here is an API Token you can use in the meantime: cf002751564a4c78f5f7ed479f1b9b
 5. Test the app with `npm run test` or using the Vitest extension.
 6. Run the app `npm run dev`
    1. The project should be served on `http://localhost:5173/copeland-weather3` which you can open with the browser of your choosing.
+   2. <span style="color: red;">WARNING:</span> Searching for weather won't work until you do the next section `Connecting to the open weather map services`. You need an API Key to use those web services.
 7. Add the project to your GitHub account
    1. Create a new repository at github.com. (this is your repository)
       - Give it the same name as the other repository.

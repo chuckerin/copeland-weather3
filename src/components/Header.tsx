@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header>
-      <div className='header-text'>Semi Current Weather</div>
+      <div className='header-text'>Current Weather</div>
     </header>
   );
 }

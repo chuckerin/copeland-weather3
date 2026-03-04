@@ -90,6 +90,9 @@ Step-by-Step Guide using GitHub Actions
       2. In the left sidebar, click on `Pages`.
       3. Under `Build and deployment`, select `Deploy from a branch` for the `Source` option.
       4. In the `Branch` dropdown, select `gh-pages` and the `/(root)` folder, then click `Save`.
+   2. While you're in the `Settings` tab, give the action you create below to write to the workflow
+      1. In the left sidebar, click on `Actions`, the `General`
+      2. Scroll down to `Workflow Permissions` and select the `Read and write permissions`
 3. Create the GitHub Actions Workflow  
    This is the core step for automation. You will create a workflow file that defines the steps to build and deploy your app every time you push to the main (or master) branch.
    1. In your repository, navigate to the `Actions` tab.
